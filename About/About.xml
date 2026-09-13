@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Founding Bonds</name>
+  <author>Cruesoe</author>
+  <packageId>cruesoe.foundingbonds</packageId>
+  <modVersion>260913</modVersion>
+  <description>Protects marriages between pawns who begin a new colony together from RimWorld's random breakup interaction.
+
+Later recruits and relationships formed after the colony begins continue to use normal relationship behavior. Founding marriages are identified automatically and marked in the Social tab.</description>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+</ModMetaData>
