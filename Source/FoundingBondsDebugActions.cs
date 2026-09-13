@@ -76,6 +76,9 @@ namespace FoundingBonds
                 return;
             }
 
+            ClearDivorceMemory(first, second);
+            ClearDivorceMemory(second, first);
+
             Messages.Message(
                 (restored ? "FoundingBonds_MarriageRestored" : "FoundingBonds_MarriageProtected")
                     .Translate(first.Named("PAWN1"), second.Named("PAWN2")),
@@ -83,6 +86,16 @@ namespace FoundingBonds
                 MessageTypeDefOf.PositiveEvent,
                 historical: false);
             SocialCardUtility.ClearCaches();
+        }
+
+        private static void ClearDivorceMemory(Pawn pawn, Pawn formerSpouse)
+        {
+            if (pawn.needs.mood != null)
+            {
+                pawn.needs.mood.thoughts.memories.RemoveMemoriesOfDefWhereOtherPawnIs(
+                    ThoughtDefOf.DivorcedMe,
+                    formerSpouse);
+            }
         }
     }
 }

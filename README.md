@@ -13,4 +13,4 @@ Build the colony around the couple you created, without their story ending befor
 
 [b]Existing saves[/b]
 
-Enable Development mode, open the Debug actions menu, and choose [i]Founding Bonds: Restore founding marriage[/i]. Click either pawn, then select their current or former spouse. Only the chosen pair is changed.
+Enable Development mode, open the Debug actions menu, and choose [i]Founding Bonds: Restore founding marriage[/i]. Click either pawn, then select their current or former spouse. Only the chosen pair is changed, and their obsolete divorce memories are cleared.
