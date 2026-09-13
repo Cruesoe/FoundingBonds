@@ -23,6 +23,27 @@ namespace FoundingBonds
             return component != null && component.Contains(first, second);
         }
 
+        public static bool TryRecord(Pawn? first, Pawn? second)
+        {
+            if (first == null || second == null || first == second || Current.Game == null)
+            {
+                return false;
+            }
+
+            FoundingBondsGameComponent? component = Current.Game.GetComponent<FoundingBondsGameComponent>();
+            if (component == null)
+            {
+                return false;
+            }
+
+            if (!component.Contains(first, second))
+            {
+                component.foundingMarriages.Add(new FoundingMarriage(first, second));
+            }
+
+            return true;
+        }
+
         public override void StartedNewGame()
         {
             base.StartedNewGame();

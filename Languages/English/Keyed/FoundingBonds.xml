@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <FoundingBonds_RelationSuffix>(founding bond)</FoundingBonds_RelationSuffix>
+  <FoundingBonds_NoRecoveryCandidate>{PAWN_labelShort} has no unprotected spouse or living former spouse.</FoundingBonds_NoRecoveryCandidate>
+  <FoundingBonds_ProtectMarriageOption>Protect marriage with {PAWN_labelShort}</FoundingBonds_ProtectMarriageOption>
+  <FoundingBonds_RestoreMarriageOption>Restore marriage with {PAWN_labelShort}</FoundingBonds_RestoreMarriageOption>
+  <FoundingBonds_MarriageRestored>{PAWN1_labelShort} and {PAWN2_labelShort} are married again and share a founding bond.</FoundingBonds_MarriageRestored>
+  <FoundingBonds_MarriageProtected>{PAWN1_labelShort} and {PAWN2_labelShort} now share a founding bond.</FoundingBonds_MarriageProtected>
+  <FoundingBonds_RecoveryFailed>Could not record the founding bond.</FoundingBonds_RecoveryFailed>
 </LanguageData>

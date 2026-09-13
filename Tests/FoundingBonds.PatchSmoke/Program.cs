@@ -37,6 +37,7 @@ namespace FoundingBonds.PatchSmoke
                 AssertPatched("RimWorld.InteractionWorker_Breakup", "RandomSelectionWeight");
                 AssertPatched("RimWorld.InteractionWorker_Breakup", "Interacted");
                 AssertPatched("RimWorld.SocialCardUtility", "GetRelationsString");
+                AssertRecoveryAction(modAssembly);
                 Console.WriteLine("Harmony patch smoke test: passed");
                 return 0;
             }
@@ -59,6 +60,21 @@ namespace FoundingBonds.PatchSmoke
             if (!owned)
             {
                 throw new InvalidOperationException("Smoke-test patch owner missing from " + typeName + "." + methodName);
+            }
+        }
+
+        private static void AssertRecoveryAction(Assembly modAssembly)
+        {
+            Type type = modAssembly.GetType("FoundingBonds.FoundingBondsDebugActions")
+                ?? throw new InvalidOperationException("Recovery action type is missing");
+            MethodInfo method = AccessTools.Method(type, "RestoreFoundingMarriage")
+                ?? throw new InvalidOperationException("Recovery action method is missing");
+
+            bool hasDebugAction = method.GetCustomAttributes(inherit: false)
+                .Any(attribute => attribute.GetType().FullName == "LudeonTK.DebugActionAttribute");
+            if (!hasDebugAction)
+            {
+                throw new InvalidOperationException("Recovery action is not registered as a debug action");
             }
         }
     }
