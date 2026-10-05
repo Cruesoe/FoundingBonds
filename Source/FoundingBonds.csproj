@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <RootNamespace>FoundingBonds</RootNamespace>
     <AssemblyName>FoundingBonds</AssemblyName>
     <OutputPath>..\1.6\Assemblies\</OutputPath>
