@@ -1,11 +1,14 @@
-Founding Bonds keeps the marriages you chose for your starting colonists from being undone by RimWorld's random breakup interaction.
-
-[b]Features[/b]
-[list]
-[*]Automatically protects married pawns who begin a new colony together.
-[*]Keeps that protection for the life of the save.
-[*]Marks protected marriages as a founding bond in the Social tab.
-[*]Leaves later recruits and relationships formed after the colony begins unchanged.
-[/list]
+[b]Keeps the marriages you chose for your starting colonists from being undone by RimWorld's random breakup interaction.[/b]
 
 Build the colony around the couple you created, without their story ending before it has begun.
+
+[h2]Features[/h2]
+[list]
+[*]Married pawns who begin a new colony together are protected automatically.
+[*]The protection lasts for the life of the save.
+[*]Protected marriages are marked as a founding bond in the Social tab.
+[*]Later recruits and relationships formed after the colony begins are unchanged.
+[/list]
+
+[h2]Compatibility[/h2]
+Safe to add to an existing save. Founding marriages are only found when a new game starts, so in an existing save use the Dev Mode action [b]Restore founding marriage[/b] to protect, or restore, one chosen marriage.
