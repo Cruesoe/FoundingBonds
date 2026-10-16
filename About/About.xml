@@ -11,6 +11,7 @@ Later recruits and relationships formed after the colony begins continue to use 
 For an existing save, a targeted Dev Mode action can restore and protect one chosen marriage without changing any other relationships.</description>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies>
     <li>
