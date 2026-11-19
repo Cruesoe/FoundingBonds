@@ -6,9 +6,9 @@
   <modVersion>261016</modVersion>
   <description>Protects marriages between pawns who begin a new colony together from RimWorld's random breakup interaction.
 
-Later recruits and relationships formed after the colony begins continue to use normal relationship behavior. Founding marriages are identified automatically and marked in the Social tab.
+Later recruits and relationships formed after the colony begins continue to use normal relationship behavior. Founding marriages are identified automatically and marked in the Social tab. Duplicate spouse records left by pawn editors are removed, so a culture that allows one spouse doesn't divorce the founding couple.
 
-For an existing save, a targeted Dev Mode action can restore and protect one chosen marriage without changing any other relationships.</description>
+For an existing save, a targeted Dev Mode action can restore and protect one chosen marriage, including a founding marriage that was divorced or left broken, without changing any other relationships.</description>
   <supportedVersions>
     <li>1.6</li>
     <li>1.7</li>

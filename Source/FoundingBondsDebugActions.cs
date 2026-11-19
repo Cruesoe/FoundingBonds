@@ -22,7 +22,8 @@ namespace FoundingBonds
                 .Where(other => other != null
                     && !other.Dead
                     && !other.Destroyed
-                    && !FoundingBondsGameComponent.Protects(pawn, other))
+                    && !(FoundingBondsGameComponent.Protects(pawn, other)
+                        && FoundingMarriageRepair.IsIntact(pawn, other)))
                 .Distinct()
                 .OrderBy(other => other.LabelShort)
                 .ToList();
@@ -41,8 +42,8 @@ namespace FoundingBonds
             foreach (Pawn candidate in candidates)
             {
                 Pawn partner = candidate;
-                bool alreadyMarried = pawn.relations.DirectRelationExists(PawnRelationDefOf.Spouse, partner);
-                string label = alreadyMarried
+                bool intact = FoundingMarriageRepair.IsIntact(pawn, partner);
+                string label = intact
                     ? "FoundingBonds_ProtectMarriageOption".Translate(partner.Named("PAWN"))
                     : "FoundingBonds_RestoreMarriageOption".Translate(partner.Named("PAWN"));
 
@@ -57,13 +58,10 @@ namespace FoundingBonds
 
         private static void RestoreAndProtect(Pawn first, Pawn second)
         {
-            bool restored = !first.relations.DirectRelationExists(PawnRelationDefOf.Spouse, second);
+            bool restored = !FoundingMarriageRepair.IsIntact(first, second);
             if (restored)
             {
-                first.relations.TryRemoveDirectRelation(PawnRelationDefOf.ExSpouse, second);
-                first.relations.TryRemoveDirectRelation(PawnRelationDefOf.Fiance, second);
-                first.relations.TryRemoveDirectRelation(PawnRelationDefOf.Lover, second);
-                first.relations.AddDirectRelation(PawnRelationDefOf.Spouse, second);
+                FoundingMarriageRepair.Remarry(first, second);
             }
 
             if (!FoundingBondsGameComponent.TryRecord(first, second))

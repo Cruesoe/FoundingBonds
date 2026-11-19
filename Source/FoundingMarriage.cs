@@ -38,6 +38,14 @@ namespace FoundingBonds
             return first != null && second != null && other.Matches(first, second);
         }
 
+        public void RemoveDuplicateSpouseEntries()
+        {
+            if (IsValid)
+            {
+                FoundingMarriageRepair.RemoveDuplicateSpouseEntries(first!, second!);
+            }
+        }
+
         public void ExposeData()
         {
             Scribe_References.Look(ref first, "first");

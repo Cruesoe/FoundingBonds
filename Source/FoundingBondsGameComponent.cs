@@ -67,6 +67,22 @@ namespace FoundingBonds
                     }
                 }
             }
+
+            RemoveDuplicateSpouseEntries();
+        }
+
+        public override void LoadedGame()
+        {
+            base.LoadedGame();
+            RemoveDuplicateSpouseEntries();
+        }
+
+        private void RemoveDuplicateSpouseEntries()
+        {
+            for (int index = 0; index < foundingMarriages.Count; index++)
+            {
+                foundingMarriages[index].RemoveDuplicateSpouseEntries();
+            }
         }
 
         public override void ExposeData()
