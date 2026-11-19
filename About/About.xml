@@ -3,7 +3,7 @@
   <name>Founding Bonds</name>
   <author>Cruesoe</author>
   <packageId>cruesoe.foundingbonds</packageId>
-  <modVersion>261016</modVersion>
+  <modVersion>261119</modVersion>
   <description>Protects marriages between pawns who begin a new colony together from RimWorld's random breakup interaction.
 
 Later recruits and relationships formed after the colony begins continue to use normal relationship behavior. Founding marriages are identified automatically and marked in the Social tab. Duplicate spouse records left by pawn editors are removed, so a culture that allows one spouse doesn't divorce the founding couple.
