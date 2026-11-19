@@ -7,7 +7,7 @@ namespace FoundingBonds
     {
         public FoundingBondsMod(ModContentPack content) : base(content)
         {
-            new Harmony("cruesoe.foundingbonds").PatchAll();
+            new Harmony("cruesoe.foundingbonds").PatchAll(typeof(FoundingBondsMod).Assembly);
         }
     }
 }

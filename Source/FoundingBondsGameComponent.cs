@@ -67,6 +67,22 @@ namespace FoundingBonds
                     }
                 }
             }
+
+            RemoveDuplicateSpouseEntries();
+        }
+
+        public override void LoadedGame()
+        {
+            base.LoadedGame();
+            RemoveDuplicateSpouseEntries();
+        }
+
+        private void RemoveDuplicateSpouseEntries()
+        {
+            for (int index = 0; index < foundingMarriages.Count; index++)
+            {
+                foundingMarriages[index].RemoveDuplicateSpouseEntries();
+            }
         }
 
         public override void ExposeData()
@@ -108,18 +124,13 @@ namespace FoundingBonds
                 for (int earlierIndex = 0; earlierIndex < index; earlierIndex++)
                 {
                     FoundingMarriage earlier = foundingMarriages[earlierIndex];
-                    if (earlier.IsValid && RecordsMatch(earlier, record))
+                    if (earlier.IsValid && earlier.SamePairAs(record))
                     {
                         foundingMarriages.RemoveAt(index);
                         break;
                     }
                 }
             }
-        }
-
-        private static bool RecordsMatch(FoundingMarriage first, FoundingMarriage second)
-        {
-            return first.SamePairAs(second);
         }
     }
 }

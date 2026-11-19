@@ -7,8 +7,9 @@ Build the colony around the couple you created, without their story ending befor
 [*]Married pawns who begin a new colony together are protected automatically.
 [*]The protection lasts for the life of the save.
 [*]Protected marriages are marked as a founding bond in the Social tab.
+[*]Duplicate spouse records that pawn editors can leave are removed, so a culture that allows one spouse doesn't divorce the founding couple.
 [*]Later recruits and relationships formed after the colony begins are unchanged.
 [/list]
 
 [h2]Compatibility[/h2]
-Safe to add to an existing save. Founding marriages are only found when a new game starts, so in an existing save use the Dev Mode action [b]Restore founding marriage[/b] to protect, or restore, one chosen marriage.
+Safe to add to an existing save. Founding marriages are only found when a new game starts, so in an existing save use the Dev Mode action [b]Restore founding marriage[/b] to protect, or restore, one chosen marriage. It also repairs a founding marriage that was divorced or left broken.
