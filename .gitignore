@@ -25,3 +25,6 @@ Directory.Build.targets
 *.slnx
 AGENTS.md
 CLAUDE.md
+
+# Workshop slide sources and renders
+Tools/Screenshots/
